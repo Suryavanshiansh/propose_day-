@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propose Day 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="card-style.css">
+</head>
+<body>
+    <!-- Floating hearts -->
+    <div class="hearts-bg" id="heartsBg"></div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        
+        <!-- Main Greeting Card -->
+        <div class="greeting-card">
+            <div class="card-front">
+                <div class="card-header">
+                    <div class="ring-animation">💍</div>
+                    <h1>Propose Day</h1>
+                    <p class="card-date">February 8, 2026</p>
+                </div>
+                <div class="card-message">
+                    <p class="quote">"Will you be mine Ananya?"</p>
+                    <p class="subtext">Four words that change everything</p>
+                </div>
+                <div class="card-decor">
+                    <div class="heart-line">
+                        <span>💕</span>
+                        <span>💖</span>
+                        <span>💕</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meaning Cards Grid -->
+        <div class="cards-section">
+            <h2 class="section-title">What It Means</h2>
+            <div class="cards-grid">
+                <div class="mini-card" style="--delay: 0s">
+                    <div class="mini-card-icon">❤️</div>
+                    <h3>Courage</h3>
+                    <p>Opening your heart to forever</p>
+                </div>
+                <div class="mini-card" style="--delay: 0.1s">
+                    <div class="mini-card-icon">✨</div>
+                    <h3>Promise</h3>
+                    <p>A commitment to share your life</p>
+                </div>
+                <div class="mini-card" style="--delay: 0.2s">
+                    <div class="mini-card-icon">🌟</div>
+                    <h3>Hope</h3>
+                    <p>Dreams of a beautiful future</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proposal Ideas Cards -->
+        <div class="cards-section">
+            <h2 class="section-title">Proposal Ideas</h2>
+            <div class="ideas-container">
+                <div class="idea-card">
+                    <div class="idea-badge">01</div>
+                    <div class="idea-content">
+                        <h3>💫 Under the Stars</h3>
+                        <p>Stargaze together, then point to the brightest star and say, "That's how you shine in my life." Drop to one knee.</p>
+                    </div>
+                </div>
+
+                <div class="idea-card">
+                    <div class="idea-badge">02</div>
+                    <div class="idea-content">
+                        <h3>🗺️ Scavenger Hunt</h3>
+                        <p>Create clues leading to special places. The final destination: you, with a ring and the question.</p>
+                    </div>
+                </div>
+
+                <div class="idea-card">
+                    <div class="idea-badge">03</div>
+                    <div class="idea-content">
+                        <h3>📍 Where It Began</h3>
+                        <p>Return to where you first met. Recreate that moment, then create a new unforgettable one.</p>
+                    </div>
+                </div>
+
+                <div class="idea-card">
+                    <div class="idea-badge">04</div>
+                    <div class="idea-content">
+                        <h3>📖 Memory Book</h3>
+                        <p>A photo album of your journey. Last page: "Our Next Chapter: Will you marry me?"</p>
+                    </div>
+                </div>
+
+                <div class="idea-card">
+                    <div class="idea-badge">05</div>
+                    <div class="idea-content">
+                        <h3>🌅 Sunrise Promise</h3>
+                        <p>Watch the sunrise together. As it breaks the horizon, ask them to start every day with you.</p>
+                    </div>
+                </div>
+
+                <div class="idea-card">
+                    <div class="idea-badge">06</div>
+                    <div class="idea-content">
+                        <h3>👨‍👩‍👧‍👦 With Family</h3>
+                        <p>Surrounded by loved ones, propose in the warmth of family support and celebration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Proposal Generator Card -->
+        <div class="cards-section">
+            <h2 class="section-title">Create Your Words</h2>
+            <div class="generator-card">
+                <div class="generator-header">
+                    <div class="gen-icon">✍️</div>
+                    <p>Let us help you find the perfect words</p>
+                </div>
+                
+                <div class="form-group">
+                    <label>Their Name</label>
+                    <input type="text" id="name" placeholder="Your love's name">
+                </div>
+                
+                <div class="form-group">
+                    <label>What You Love Most</label>
+                    <input type="text" id="quality" placeholder="Their smile, kindness...">
+                </div>
+                
+                <div class="form-group">
+                    <label>Shared Dream</label>
+                    <input type="text" id="dream" placeholder="Travel, build a home...">
+                </div>
+                
+                <button class="generate-btn" onclick="generateWords()">
+                    <span>Generate Proposal</span>
+                    <span class="btn-icon">💖</span>
+                </button>
+                
+                <div class="output-card" id="outputCard">
+                    <div class="output-icon">💕</div>
+                    <p id="outputText"></p>
+                    <button class="copy-btn" onclick="copyText()">Copy 📋</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tips Cards -->
+        <div class="cards-section">
+            <h2 class="section-title">Tips for Success</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-emoji">🎯</div>
+                    <h4>Be Yourself</h4>
+                    <p>Stay authentic</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-emoji">💭</div>
+                    <h4>Make It Personal</h4>
+                    <p>Use your story</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-emoji">🎬</div>
+                    <h4>Know Their Style</h4>
+                    <p>Grand or intimate?</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-emoji">⏰</div>
+                    <h4>Perfect Timing</h4>
+                    <p>When you're both present</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-emoji">📸</div>
+                    <h4>Capture It</h4>
+                    <p>Photos or video</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-emoji">❤️</div>
+                    <h4>Speak Honestly</h4>
+                    <p>From the heart</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quote Card -->
+        <div class="quote-card">
+            <div class="quote-content">
+                <div class="quote-mark">"</div>
+                <p class="quote-text">In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine.</p>
+                <p class="quote-author">— Maya Angelou</p>
+            </div>
+        </div>
+
+        <!-- Footer Card -->
+        <div class="footer-card">
+            <div class="footer-heart">💕</div>
+            <p>May your proposal be as beautiful as your love</p>
+            <p class="footer-date">Propose Day 2026</p>
+        </div>
+
+    </div>
+
+    <!-- Floating Button -->
+    <button class="float-btn" onclick="createBurst()">💖</button>
+
+    <script src="card-script.js"></script>
+</body>
+</html>
